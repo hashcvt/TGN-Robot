@@ -91,7 +91,7 @@ async def nsfw_watch(event):
         return
     input_str = event.pattern_match.group(1)
     if not await is_admin(event, BOT_ID):
-        await event.reply("`I Should Be Admin To Do This!`")
+        await event.reply("`I Should Be an Admin To Do This!`")
         return
     if await is_admin(event, event.message.sender_id):
         if (
@@ -114,7 +114,7 @@ async def nsfw_watch(event):
             or input_str == "disable"
         ):
             if not is_nsfwatch_indb(str(event.chat_id)):
-                await event.reply("This Chat Has Not Enabled Nsfw Watch.")
+                await event.reply("This Chat Has Not Enabled Nsfw Watch yet.")
                 return
             rmnsfwatch(str(event.chat_id))
             await event.reply(
@@ -125,7 +125,7 @@ async def nsfw_watch(event):
                 "I undestand `/nsfwguardian on` and `/nsfwguardian off` only"
             )
     else:
-        await event.reply("`You Should Be Admin To Do This!`")
+        await event.reply("`You Should Be an Admin To Do This!`")
         return
 
 
@@ -148,7 +148,7 @@ async def ws(event):
         await event.delete()
         st = sender.first_name
         hh = sender.id
-        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Layla deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By LaylaAI` \n**#GROUP_GUARDIAN** "
+        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Yukinon deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By Yukinon` \n**#GROUP_GUARDIAN** "
         dev = await event.respond(final)
         await asyncio.sleep(10)
         await dev.delete()
@@ -354,9 +354,9 @@ async def del_profanity(event):
                     if sender.username is None:
                         st = sender.first_name
                         hh = sender.id
-                        final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a slang word and your message has been deleted"
+                        final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a baad word and your message has been deleted"
                     else:
-                        final = f"Sir **{msg}** is detected as a slang word and your message has been deleted"
+                        final = f"Sir **{msg}** is detected as a bad word and your message has been deleted"
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
@@ -367,7 +367,7 @@ async def del_profanity(event):
                     await event.delete()
                     st = sender.first_name
                     hh = sender.id
-                    final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Layla deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By LaylaAI` \n**#GROUP_GUARDIAN** "
+                    final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Yukinon deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By Yukinon` \n**#GROUP_GUARDIAN** "
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
@@ -422,7 +422,7 @@ async def del_profanity(event):
                     await event.delete()
                     st = sender.first_name
                     hh = sender.id
-                    final = f"[{st}](tg://user?id={hh}) you should only speak in english here !"
+                    final = f"[{st}](tg://user?id={hh}) you should only speak in english here If You Don't Know English Please leave !"
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
@@ -430,14 +430,14 @@ async def del_profanity(event):
 
 __help__ = """
 <b> Group Guardian: </b>
-✪ Layla can protect your group from NSFW senders, Slag word users and also can force members to use English
+✪ Yukinon can protect your group from NSFW senders, bad word users and also can force members to use English
 
 <b>Commmands</b>
  - /gshield <i>on/off</i> - Enable|Disable Porn cleaning
  - /globalmode <i>on/off</i> - Enable|Disable English only mode
  - /profanity <i>on/off</i> - Enable|Disable slag word cleaning
  
-Note: Special credits goes to Julia project and Friday Userbot
+Note: Special credits goes to tr0j3n and Other Devs
  
 """
-__mod_name__ = "Shield"
+__mod_name__ = "🤍 Shield 🤍"
