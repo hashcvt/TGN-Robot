@@ -42,13 +42,13 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Join our @{channel} channel and press 'UnMute Me' button.",
+                        text=f"❗ Join our @{channel} channel and press 'UnMute Me' button please!",
                         show_alert=True,
                     )
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ You have been muted by admins due to some other reason.",
+                    text="❗ You have been muted by admins due to some other reason.I dunno The reason sorry!",
                     show_alert=True,
                 )
         else:
@@ -64,7 +64,7 @@ def _onUnMuteRequest(client, cb):
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ Warning! Don't press the button when you cn talk.",
+                    text="❗ Warning! Don't press the button when you can talk baaka.",
                     show_alert=True,
                 )
 
@@ -196,4 +196,4 @@ __help__ = """
   💡If you disable fsub, you need to set again for working.. /fsub {channel username} 
  ❍ /fsub clear - To unmute all members who muted by me.
 """
-__mod_name__ = "F-Sub"
+__mod_name__ = "🤍 F-Sub 🤍"
