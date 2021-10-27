@@ -32,5 +32,5 @@ async def _(event):
         )
     except Exception as e:
         print(e)
-        await event.reply("I can't find that")
+        await event.reply("I can't find that sorry!")
 
