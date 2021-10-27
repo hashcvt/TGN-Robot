@@ -35,7 +35,7 @@ async def _(event):
     if event.fwd_from:
         return
     
-    webevent = await event.reply("searching........")
+    webevent = await event.reply("searching........Please Wait.......!")
     match = event.pattern_match.group(1)
     page = re.findall(r"page=\d+", match)
     try:
@@ -126,7 +126,7 @@ async def okgoogle(img):
                 "\n`Parsing source now. Maybe.`"
             )
         else:
-            await dev.edit("`Google told me to fuck off.`")
+            await dev.edit("`Google told me to Go Away!.`")
             return
 
         os.remove(name)
@@ -135,9 +135,79 @@ async def okgoogle(img):
         imgspage = match["similar_images"]
 
         if guess and imgspage:
-            await dev.edit(f"[{guess}]({fetchUrl})\n\n`Looking for this Image...`")
+            await dev.edit(f"[{guess}]({fetchUrl})\n\n`Looking for this Image...Hmmmmmmm...`")
         else:
-            await dev.edit("`Can't find this piece of shit.`")
+            await dev.edit("`Can't find this Pic.`")
+            return
+
+        if img.pattern_match.group(1):
+            lim = img.pattern_match.group(1)
+        else:
+            lim = 3
+        images = await scam(match, lim)
+        yeet = []
+        for i in images:
+            k = requests.get(i)
+            yeet.append(k.content)
+        try:
+            await tbot.send_file(
+                entity=await tbot.get_input_entity(img.chat_id),
+                file=yeet,
+                reply_to=img,
+            )
+        except TypeError:
+            pass
+        await dev.edit(
+            f"[{guess}]({fetchUrl})\n\n[Visually similar images]({imgspage})"
+        )
+@register(pattern=r"^/grs(?: |$)(\d*)")
+async def okgoogle(img):
+    """ For .grs command, Google search images and stickers. """
+    if os.path.isfile("okgoogle.png"):
+        os.remove("okgoogle.png")
+    
+    message = await img.get_reply_message()
+    if message and message.media:
+        photo = io.BytesIO()
+        await tbot.download_media(message, photo)
+    else:
+        await img.reply("`Reply to photo or sticker baaka baakaa.`")
+        return
+
+    if photo:
+        dev = await img.reply("`Processing...`")
+        try:
+            image = Image.open(photo)
+        except OSError:
+            await dev.edit("`Unsupported sexuality, most likely.`")
+            return
+        name = "okgoogle.png"
+        image.save(name, "PNG")
+        image.close()
+        # https://stackoverflow.com/questions/23270175/google-reverse-image-search-using-post-request#28792943
+        searchUrl = "https://www.google.com/searchbyimage/upload"
+        multipart = {"encoded_image": (name, open(name, "rb")), "image_content": ""}
+        response = requests.post(searchUrl, files=multipart, allow_redirects=False)
+        fetchUrl = response.headers["Location"]
+
+        if response != 400:
+            await dev.edit(
+                "`Image successfully uploaded to Google. Maybe.`"
+                "\n`Parsing source now. Maybe.`"
+            )
+        else:
+            await dev.edit("`Google told me to Go Away!.`")
+            return
+
+        os.remove(name)
+        match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
+        guess = match["best_guess"]
+        imgspage = match["similar_images"]
+
+        if guess and imgspage:
+            await dev.edit(f"[{guess}]({fetchUrl})\n\n`Looking for this Image...Hmmmmmmm...`")
+        else:
+            await dev.edit("`Can't find this Pic.`")
             return
 
         if img.pattern_match.group(1):
@@ -282,6 +352,7 @@ __help__ = """
  ❍ /img <text>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
  ❍ /app <appname>*:* Searches for an app in Play Store and returns its details.
  ❍ /reverse: Does a reverse image search of the media which it was replied to.
+ ❍ /grs: Does a reverse image search of the media which it was replied to.
  ❍ /gps <location>*:* Get gps location.
  ❍ /github <username>*:* Get information about a GitHub user.
  ❍ /country <country name>*:* Gathering info about given country
