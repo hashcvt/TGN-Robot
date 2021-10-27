@@ -19,7 +19,7 @@ async def song(client, message):
         await message.reply("<b>Enter song name❗</b>")
         return ""
     m = await message.reply_text(
-        "Downloading your song,\nPlz wait ⏳️"
+        "Downloading your song,\nPlease wait ⏳️"
     )
     try:
         r = requests.get(f"https://jostapi.herokuapp.com/saavn?query={args}")
@@ -146,7 +146,7 @@ async def deezer(_, message):
     await m.delete()
     
     
-__mod_name__ = "◎Music"
+__mod_name__ = "🤍 Music 🤍 "
 
 __help__ = """
 • `/song`** <songname artist(optional)>: download the song in it's best quality available.(API BASED)
