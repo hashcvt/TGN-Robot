@@ -8,7 +8,7 @@ import requests
 from TGNRobot import telethn as borg, HEROKU_APP_NAME, HEROKU_API_KEY, OWNER_ID
 from TGNRobot.events import register
 
-heroku_api = "158aee31-a66c-4eff-9088-bf447a250764"
+heroku_api = "https://api.heroku.com"
 Heroku = heroku3.from_key(HEROKU_API_KEY)
 
 
