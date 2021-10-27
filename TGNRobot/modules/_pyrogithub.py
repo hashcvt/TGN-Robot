@@ -5,7 +5,7 @@ from TGNRobot import pbot
 from TGNRobot.pyrogramee.errors import capture_err
 
 
-__mod_name__ = "Github"
+__mod_name__ = "🤍 Github 🤍"
 
 
 @pbot.on_message(filters.command('github'))
