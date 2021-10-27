@@ -19,7 +19,7 @@ async def msg(event):
     try:
 	    a = country.info()
     except:
-	    await event.reply("Country Not Avaiable Currently")
+	    await event.reply("Country Not Avaiable Currently 😂 ")
     name = a.get("name")
     bb= a.get("altSpellings")
     hu = ''
@@ -79,7 +79,7 @@ async def msg(event):
 
     wiki = a.get("wiki")
 
-    caption = f"""<b><u>Information Gathered Successfully</b></u>
+    caption = f"""<b><u>Yaaaay! Information Gathered Successfully</b></u>
 <b>
 Country Name:- {name}
 Alternative Spellings:- {hu}
@@ -101,7 +101,7 @@ Time Zones:- {tom}
 Top Level Domain:- {lanester}
 wikipedia:- {wiki}</b>
 
-Gathered By @Superior_bots.</b>
+Gathered By @Yukinonthecutebot.</b>
 """
     
     
