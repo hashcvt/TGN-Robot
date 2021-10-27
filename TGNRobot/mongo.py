@@ -9,8 +9,9 @@ from TGNRobot.conf import get_int_key, get_str_key
 
 
 MONGO_PORT = get_int_key("27017")
-MONGO_DB_URI = get_str_key("MONGO_DB_URI")
-MONGO_DB = "DaisyX"
+MONGO_DB_URI = get_str_key("mongodb+srv://TROJ3N:Nethika123@cluster0.uppg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+")
+MONGO_DB = "TROJ3N"
 
 
 client = MongoClient()
