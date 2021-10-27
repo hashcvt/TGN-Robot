@@ -645,7 +645,7 @@ def devlist(update: Update, context: CallbackContext):
 #  ❍ /logs Get heroku dyno logs.
 
 # `⚠️ Read from top`
-# Visit @{SUPPORT_CHAT} for more information.
+# Visit @waifuNetwork for more information.
 # """
 
 SUDO_HANDLER = CommandHandler(("addsudo", "adddragon"), addsudo)
@@ -678,7 +678,7 @@ dispatcher.add_handler(SUPPORTLIST_HANDLER)
 dispatcher.add_handler(SUDOLIST_HANDLER)
 dispatcher.add_handler(DEVLIST_HANDLER)
 
-__mod_name__ = "Dev"
+__mod_name__ = "🤍 Dev 🤍"
 __handlers__ = [
     SUDO_HANDLER,
     SUPPORT_HANDLER,
