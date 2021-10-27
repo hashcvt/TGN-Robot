@@ -138,16 +138,14 @@ def list_all_chats(update: Update, context: CallbackContext):
             sleep(e.retry_after)
     update.effective_message.reply_text(text, parse_mode="HTML")
 
-__help__ = """
-Chatbot utilizes the Kuki's api which allows Sophia to talk and provide a more interactive group chat experience.
+__help__ = """.
 *Admins only Commands*:
   ➢ `/Chatbot`*:* Shows chatbot control panel
   
- Reports bugs at Kuki-api.tk
-*Powered by ItelAi* (https://github/itelai) from @KukiUpdates
+*Powered by WaifuNetwork* (https://t.me/waifuNetwork)
 """
 
-__mod_name__ = "ChatBot"
+__mod_name__ = "🤍 ChatBot 🤍"
 
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
