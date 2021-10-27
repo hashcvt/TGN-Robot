@@ -84,7 +84,7 @@ buttons = [
         InlineKeyboardButton(
             text="ᴀdd Me To your Group", url="t.me/Yukinonthecutebot?startgroup=true"),
     ],
-    [,
+    [
         InlineKeyboardButton(
             text="ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/waifuNetBots"
         ),
