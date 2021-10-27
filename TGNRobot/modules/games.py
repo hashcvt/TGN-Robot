@@ -11,7 +11,7 @@ async def _(event):
     r = await event.reply(file=InputMediaDice(""))
     input_int = int(input_str)
     if input_int > 6:
-        await event.reply("hey nigga use number 1 to 6 only")
+        await event.reply("hey baka use number 1 to 6 only")
     
     else:
         try:
@@ -31,7 +31,7 @@ async def _(event):
     r = await event.reply(file=InputMediaDice("🎯"))
     input_int = int(input_str)
     if input_int > 6:
-        await event.reply("hey nigga use number 1 to 6 only")
+        await event.reply("hey baka use number 1 to 6 only")
     
     else:
         try:
@@ -51,7 +51,7 @@ async def _(event):
     r = await event.reply(file=InputMediaDice("🏀"))
     input_int = int(input_str)
     if input_int > 5:
-        await event.reply("hey nigga use number 1 to 6 only")
+        await event.reply("hey baka use number 1 to 6 only")
     
     else:
         try:
@@ -76,4 +76,4 @@ __help__ = """
   - /dare : for random dare.
 """
 
-__mod_name__ = "Game"
+__mod_name__ = "🤍 Game 🤍"
