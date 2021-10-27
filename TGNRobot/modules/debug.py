@@ -65,7 +65,7 @@ dispatcher.add_handler(LOG_HANDLER)
 
 DEBUG_HANDLER = CommandHandler("debug", debug)
 dispatcher.add_handler(DEBUG_HANDLER)
-
-__mod_name__ = "Debug"
+ 
+__mod_name__ = "🤍 Debug 🤍"
 __command_list__ = ["debug"]
 __handlers__ = [DEBUG_HANDLER]
