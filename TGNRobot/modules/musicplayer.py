@@ -1,6 +1,7 @@
-__mod_name__ = "🤍 Music Player 🤍"
+__mod_name__ = "🤍 Image Editor 🤍"
 
 __help__ = """
-=>> *Song Playing* 🎧 
-Not Working
+==> /editor - To start The Image Editor
+==> /ihelp - Help Menu of the Image Editor
+==> /iabout - About The image Editor
 """
