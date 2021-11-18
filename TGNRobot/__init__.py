@@ -29,51 +29,51 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
 ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
-    TOKEN = os.environ.get("TOKEN", None)
+    TOKEN = "2025919134:AAH1EVKeu8gNiLuKSBuDGV4BRkwbfuBzbQs"
 
     try:
-        OWNER_ID = int(os.environ.get("OWNER_ID", None))
+        OWNER_ID = 1954364940
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", None)
-    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
+    JOIN_LOGGER = "-1001568719671"
+    OWNER_USERNAME = "tr0j3n"
 
     try:
-        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
-        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
+        DRAGONS = set(int(x) for x in "1954364940".split())
+        DEV_USERS = set(int(x) for x in "1954364940".split())
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
+        DEMONS = set(int(x) for x in "1954364940".split())
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
+        WOLVES = set(int(x) for x in "1954364940".split())
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
+        TIGERS = set(int(x) for x in "1954364940".split())
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
-    INFOPIC = bool(os.environ.get("INFOPIC", False))
-    EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
-    WEBHOOK = bool(os.environ.get("WEBHOOK", False))
+    INFOPIC = bool("INFOPIC", False)
+    EVENT_LOGS = "-1001568719671"
+    WEBHOOK = bool("WEBHOOK", False)
     URL = os.environ.get("URL", "")  # Does not contain token
     PORT = int(os.environ.get("PORT", 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
-    API_ID = os.environ.get("API_ID", None)
-    API_HASH = os.environ.get("API_HASH", None)
-    BOT_ID = int(os.environ.get("BOT_ID", None))
+    API_ID = 4091096
+    API_HASH = "6bb0682b4af56456201c3b9d8b99c94a"
+    BOT_ID = 2025919134
     DB_URI = os.environ.get("DATABASE_URL")
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
-    DONATION_LINK = os.environ.get("DONATION_LINK")
-    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
-    HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
+    MONGO_DB_URI = "mongodb+srv://TROJ3N:Nethika123@cluster0.uppg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    DONATION_LINK = "https://t.me/tr0j3n"
+    HEROKU_API_KEY = "df102f98-cc01-4e40-a020-6b50ee29af21"
+    HEROKU_APP_NAME = "yukinoyuki"
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
@@ -84,13 +84,13 @@ if ENV:
     WORKERS = int(os.environ.get("WORKERS", 8))
     BAN_STICKER = os.environ.get("BAN_STICKER", "CAADAgADOwADPPEcAXkko5EB3YGYAg")
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
-    CASH_API_KEY = os.environ.get("CASH_API_KEY", None)
-    TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
+    CASH_API_KEY = "UV7PDV3CTZ4RF6JG"
+    TIME_API_KEY = "6NS5U207UB3D"
     AI_API_KEY = os.environ.get("AI_API_KEY", None)
     WALL_API = os.environ.get("WALL_API", None)
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
+    SUPPORT_CHAT = "waifuNetBots"
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
-    SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
+    SPAMWATCH_API = "cI1g0oI7ttUNM1VihXYOKCXsrT~kxKtJtnTJCy0UPfcg6EdjvL0g~dzYd9q2V1Y0"
 
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
 
