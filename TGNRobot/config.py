@@ -13,7 +13,7 @@ class Config(object):
     LOGGER = True
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
-
+    TOKEN = "2025919134:AAH1EVKeu8gNiLuKSBuDGV4BRkwbfuBzbQs"
     EVENT_LOGS = "-1001568719671"
     WEBHOOK = bool(False)
     URL = os.environ.get("URL", "")  # Does not contain token
