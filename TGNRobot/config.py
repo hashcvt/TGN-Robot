@@ -53,6 +53,7 @@ class Config(object):
     OWNER_ID = 1954364940
     JOIN_LOGGER = "-1001568719671"
     OWNER_USERNAME = "tr0j3n"
+    SQLALCHEMY_DATABASE_URI = None
 class Production(Config):
     LOGGER = True
 
