@@ -55,9 +55,4 @@ class Config(object):
     OWNER_USERNAME = "tr0j3n"
     SQLALCHEMY_DATABASE_URI = None
     BL_CHATS = None
- class Production(Config):
-    LOGGER = True
 
-
-class Development(Config):
-    LOGGER = True
