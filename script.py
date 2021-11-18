@@ -1,6 +1,6 @@
 class script(object):
 
-    START_MSG = """ <b>Hi {}
+    START_MSG = """ <b>Hey!
 
 This is the Image Editor Of Yukino which Supports various modes
 
