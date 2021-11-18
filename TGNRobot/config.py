@@ -14,53 +14,43 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 4091096  # integer value, dont use ""
+    INFOPIC = bool("INFOPIC", False)
+    EVENT_LOGS = "-1001568719671"
+    WEBHOOK = bool("WEBHOOK", False)
+    URL = os.environ.get("URL", "")  # Does not contain token
+    PORT = int(os.environ.get("PORT", 5000))
+    CERT_PATH = os.environ.get("CERT_PATH")
+    API_ID = 4091096
     API_HASH = "6bb0682b4af56456201c3b9d8b99c94a"
-    TOKEN = "2025919134:AAH1EVKeu8gNiLuKSBuDGV4BRkwbfuBzbQs"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 1954364940  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "tr0j3n" 
-    SUPPORT_CHAT = "waifuNetwork"  # Your own group for support, do not add the @
-    JOIN_LOGGER = (
-        -1001568719671
-    )  # Prints any new group the bot is added to, prints just the name and ID.
-    EVENT_LOGS = (
-        -1001568719671
-    )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
-
-    # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = ""  # needed for any database modules
-    LOAD = []
-    NO_LOAD = ["rss", "cleaner", "connection", "math"]
-    WEBHOOK = False
-    INFOPIC = True
-    URL = None
-    SPAMWATCH_API = "cI1g0oI7ttUNM1VihXYOKCXsrT~kxKtJtnTJCy0UPfcg6EdjvL0g~dzYd9q2V1Y0"  # go to support.spamwat.ch to get key
-    SPAMWATCH_SUPPORT_CHAT = "SpamWatchSupport"
-
-    # OPTIONAL
-    ##List of id's -  (not usernames) for users which have sudo access to the bot.
-  
-    DONATION_LINK = None  # EG, paypal
-    CERT_PATH = None
-    PORT = 5000
-    DEL_CMDS = True  # Delete commands that users dont have access to, like delete /ban if a non admin uses it.
-    STRICT_GBAN = True
-    WORKERS = (
-        8  # Number of subthreads to use. Set as number of threads your processor uses
-    )
-    BAN_STICKER = ""  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
-    ALLOW_EXCL = True  # Allow ! commands as well as / (Leave this to true so that blacklist can work)
-    CASH_API_KEY = (
-        "UV7PDV3CTZ4RF6JG"  # Get your API key from https://www.alphavantage.co/support/#api-key
-    )
-    TIME_API_KEY = "6NS5U207UB3D"  # Get your API key from https://timezonedb.com/api
-    WALL_API = (
-        "awoo"  # For wallpapers, get one from https://wall.alphacoders.com/api.php
-    )
-    AI_API_KEY = "awoo"  # For chatbot, get one from https://coffeehouse.intellivoid.net/dashboard
-    BL_CHATS = []  # List of groups that you want blacklisted.
-    SPAMMERS = None
-
+    BOT_ID = 2025919134
+    DB_URI = os.environ.get("DATABASE_URL")
+    MONGO_DB_URI = "mongodb+srv://TROJ3N:Nethika123@cluster0.uppg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    DONATION_LINK = "https://t.me/tr0j3n"
+    HEROKU_API_KEY = "df102f98-cc01-4e40-a020-6b50ee29af21"
+    HEROKU_APP_NAME = "yukinoyuki"
+    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
+    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
+    VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
+    LOAD = os.environ.get("LOAD", "").split()
+    NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
+    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
+    STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False))
+    WORKERS = int(os.environ.get("WORKERS", 8))
+    BAN_STICKER = os.environ.get("BAN_STICKER", "CAADAgADOwADPPEcAXkko5EB3YGYAg")
+    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
+    CASH_API_KEY = "UV7PDV3CTZ4RF6JG"
+    TIME_API_KEY = "6NS5U207UB3D"
+    AI_API_KEY = os.environ.get("AI_API_KEY", None)
+    WALL_API = os.environ.get("WALL_API", None)
+    SUPPORT_CHAT = "waifuNetBots"
+    SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
+    SPAMWATCH_API = "cI1g0oI7ttUNM1VihXYOKCXsrT~kxKtJtnTJCy0UPfcg6EdjvL0g~dzYd9q2V1Y0"
+    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
+    DRAGONS = set(int(x) for x in "1954364940".split())
+    DEV_USERS = set(int(x) for x in "1954364940".split())
+    DEMONS = set(int(x) for x in "1954364940".split())
+    WOLVES = set(int(x) for x in "1954364940".split())
+    TIGERS = set(int(x) for x in "1954364940".split())
 class Production(Config):
     LOGGER = True
 
