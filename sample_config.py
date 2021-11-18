@@ -5,11 +5,11 @@ import os
 
 
 class Config(object):
-    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+    TG_BOT_TOKEN = "2025919134:AAH1EVKeu8gNiLuKSBuDGV4BRkwbfuBzbQs"
 
-    APP_ID = int(os.environ.get("APP_ID", 12345))
+    APP_ID = 4091096
 
-    API_HASH = os.environ.get("API_HASH", "")
+    API_HASH = "6bb0682b4af56456201c3b9d8b99c94a"
 
     # Get this api from https://www.remove.bg/b/background-removal-api
-    RemoveBG_API = os.environ.get("RemoveBG_API", "")
+    RemoveBG_API = "YED79ZUfWQEZyMTYqkPNciff"
