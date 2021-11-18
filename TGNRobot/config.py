@@ -14,9 +14,8 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    INFOPIC = bool("INFOPIC", False)
     EVENT_LOGS = "-1001568719671"
-    WEBHOOK = bool("WEBHOOK", False)
+    WEBHOOK = bool(False)
     URL = os.environ.get("URL", "")  # Does not contain token
     PORT = int(os.environ.get("PORT", 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
@@ -29,23 +28,23 @@ class Config(object):
     HEROKU_API_KEY = "df102f98-cc01-4e40-a020-6b50ee29af21"
     HEROKU_APP_NAME = "yukinoyuki"
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
-    VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
+    OPENWEATHERMAP_ID = None
+    VIRUS_API_KEY =  None
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
-    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
-    STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False))
-    WORKERS = int(os.environ.get("WORKERS", 8))
-    BAN_STICKER = os.environ.get("BAN_STICKER", "CAADAgADOwADPPEcAXkko5EB3YGYAg")
-    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
+    DEL_CMDS = bool (False)
+    STRICT_GBAN = bool( False)
+    WORKERS = int( 8)
+    BAN_STICKER =
+    ALLOW_EXCL =  False
     CASH_API_KEY = "UV7PDV3CTZ4RF6JG"
     TIME_API_KEY = "6NS5U207UB3D"
-    AI_API_KEY = os.environ.get("AI_API_KEY", None)
-    WALL_API = os.environ.get("WALL_API", None)
+    AI_API_KEY = None
+    WALL_API =  None
     SUPPORT_CHAT = "waifuNetBots"
-    SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
+    SPAMWATCH_SUPPORT_CHAT =  None
     SPAMWATCH_API = "cI1g0oI7ttUNM1VihXYOKCXsrT~kxKtJtnTJCy0UPfcg6EdjvL0g~dzYd9q2V1Y0"
-    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
+    ALLOW_CHATS = True
     DRAGONS =  "1954364940"
     DEV_USERS = "1954364940"
     DEMONS = "1954364940"
