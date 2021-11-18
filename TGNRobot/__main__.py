@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Heyy! I'm Yukinoshita Yukino 🤍
+Heyy! I'm Yukino Yukinoshita 🤍
 A Cute And Powerful Anime Themed Group Manager😍
  [❤](https://telegra.ph/file/d5e5416fd903edc5123d8.jpg)
 """
@@ -82,7 +82,7 @@ A Cute And Powerful Anime Themed Group Manager😍
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀdd Me To your Group", url="t.me/Yukinonthecutebot?startgroup=true"),
+            text="➕ᴀdd Me To your Group➕", url="t.me/Yukinonthecutebot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
