@@ -35,7 +35,7 @@ class Config(object):
     DEL_CMDS = bool (False)
     STRICT_GBAN = bool( False)
     WORKERS = int( 8)
-    BAN_STICKER =
+    BAN_STICKER = None
     ALLOW_EXCL =  False
     CASH_API_KEY = "UV7PDV3CTZ4RF6JG"
     TIME_API_KEY = "6NS5U207UB3D"
