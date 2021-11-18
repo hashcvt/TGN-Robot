@@ -50,6 +50,9 @@ class Config(object):
     DEMONS = "1954364940"
     WOLVES =  "1954364940"
     TIGERS =  "1954364940"
+    OWNER_ID = 1954364940
+    JOIN_LOGGER = "-1001568719671"
+    OWNER_USERNAME = "tr0j3n"
 class Production(Config):
     LOGGER = True
 
