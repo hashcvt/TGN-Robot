@@ -56,3 +56,5 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = None
     BL_CHATS = None
 
+class Development(Config):
+    LOGGER = True
