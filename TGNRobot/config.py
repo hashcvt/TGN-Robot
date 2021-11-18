@@ -46,11 +46,11 @@ class Config(object):
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = "cI1g0oI7ttUNM1VihXYOKCXsrT~kxKtJtnTJCy0UPfcg6EdjvL0g~dzYd9q2V1Y0"
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    DRAGONS = set(int(x) for x in "1954364940".split())
-    DEV_USERS = set(int(x) for x in "1954364940".split())
-    DEMONS = set(int(x) for x in "1954364940".split())
-    WOLVES = set(int(x) for x in "1954364940".split())
-    TIGERS = set(int(x) for x in "1954364940".split())
+    DRAGONS =  "1954364940"
+    DEV_USERS = "1954364940"
+    DEMONS = "1954364940"
+    WOLVES =  "1954364940"
+    TIGERS =  "1954364940"
 class Production(Config):
     LOGGER = True
 
