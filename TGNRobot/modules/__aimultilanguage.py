@@ -145,7 +145,6 @@ __help__ = """.
 *Powered by WaifuNetwork* (https://t.me/waifuNetwork)
 """
 
-__mod_name__ = "🤍 ChatBot 🤍"
 
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
