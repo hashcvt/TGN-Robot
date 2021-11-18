@@ -56,7 +56,7 @@ async def ihelp(client, message):
         pass
 
 
-@Client.on_message(filters.command(["about"]) & filters.private)
+@Client.on_message(filters.command(["iabout"]) & filters.private)
 async def iabout(client, message):
     try:
         await message.reply_text(
