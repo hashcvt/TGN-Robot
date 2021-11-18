@@ -1,3 +1,3 @@
 worker: python3 -m TGNRobot
-ps:scale worker=1
-worker: worker: python3 bot.py
+ps:scale worker=2
+worker2: python3 bot.py
