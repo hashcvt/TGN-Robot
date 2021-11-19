@@ -209,8 +209,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         "scanlineglitch",
         "blur",
         "circle",
-        "border"
-        "help",
+        "border",
+        
     ]:
         await query.message.delete()
         if query.data == "bright":
@@ -320,3 +320,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data == "rmbgsticker":
             await removebg_sticker(client, query.message)
+       
+        elif query.data == "help":
+            await help(client, query.message)
+
