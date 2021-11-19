@@ -209,7 +209,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         "scanlineglitch",
         "blur",
         "circle",
-        "border",
+        "border"
+        "help",
     ]:
         await query.message.delete()
         if query.data == "bright":
