@@ -74,40 +74,40 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Heyy! I'm Yukino Yukinoshita 🤍
-A Cute And Powerful Anime Themed Group Manager😍
- [❤](https://telegra.ph/file/d5e5416fd903edc5123d8.jpg)
+Hey Demon Lord I'm an archmage named **Megumin** ❤️‍🔥
+I can Handle Demons in Groups with my high level skill **Explosion** 😏
+ [❤](https://wallpapercave.com/wp/wp2439591.png)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ᴀdd Me To your Group➕", url="t.me/Yukinonthecutebot?startgroup=true"),
+            text="💥Add Me To Your Group💥", url="t.me/theMeguminBot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
-            text="ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/waifuNetBots"
+            text="🛡Guild 🛡", url=f"https://t.me/waifuNetBots"
         ),
     ],
     [
-        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇꜱ ☑️", url=f"https://t.me/waifuNetwork"),
+        InlineKeyboardButton(text="🧡My World🧡", url=f"https://t.me/waifuNetwork"),
         InlineKeyboardButton(
-            text="Yukino Chat", url=f"https://t.me/tr0j3n"
+            text="🌹Leader🌹", url=f"https://t.me/tr0j3n"
         ),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="help_back"),
+        InlineKeyboardButton(text="🐾Help🐾", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
 `ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ, ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴀ ʙᴜᴛᴛᴏɴ..`
-ᴀʟꜱᴏ ʏᴏᴜ ᴄᴀɴ ᴀꜱᴋ ᴀɴʏᴛʜɪɴɢ ɪɴ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ [❤️](https://telegra.ph/file/c3889b772cae27d40736a.png)"""
+ᴀʟꜱᴏ ʏᴏᴜ ᴄᴀɴ ᴀꜱᴋ ᴀɴʏᴛʜɪɴɢ ɪɴ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ [💥](https://vsthemes.org/uploads/posts/2019-05/1558356725_2.png)"""
 
-START_IMG = "https://telegra.ph/file/e0f52340b5ffaf53274d8.jpg"
+START_IMG = "https://wallpapercave.com/wp/wp2439605.png"
 
-DONATE_STRING = """Thank You Very Much..We Don't Need Any money from our Users..please use the bot as you wish."""
+DONATE_STRING = """Thank You Very Much..We Don't Need Any money from our Users..."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -220,7 +220,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_video(
-            START_IMG, caption= "<code>Yukinon is Here For You❤\nI am Awake Since</code>: <code>{}</code>".format(
+            START_IMG, caption= "<code>Megumin is Here For You❤\nI am Awake Since</code>: <code>{}</code>".format(
                 uptime            
             ),
             parse_mode=ParseMode.HTML,
@@ -355,14 +355,14 @@ def zaid_about_callback(update, context):
     query = update.callback_query
     if query.data == "zaid_":
         query.message.edit_text(
-            text=""" ℹ️ I am [Yukinon](t.me/Yukinonthecutebot), a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I am [Megumin](t.me/TheMeguminBot), a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \nYukinon's licensed under the GNU General Public License v3.0
+                 \Megumin's licensed under the GNU General Public License v3.0
                  \n\nIf you have any question about bot, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -389,7 +389,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I am [Yukinon](t.me/Yukinonthecutebot)
+            text=""" Hi..🤗 I am [Megumin](t.me/TheMeguminBot)
                 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -685,7 +685,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes I'm alive 😹")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm aliveee ❤️‍🔥 ")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
