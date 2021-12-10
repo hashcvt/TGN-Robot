@@ -169,7 +169,7 @@ def kang(update: Update, context: CallbackContext):
                     + f"\nEmoji is: {sticker_emoji}",
                     [
         InlineKeyboardButton(
-            text="➕ᴀdd Me To your Group➕", url="(t.me/addstickers/{packname})"),
+            text="➕ᴀdd Me To your Group➕", url="t.me/addstickers/{packname}"),
     ],
                     parse_mode=ParseMode.MARKDOWN,
                 )
