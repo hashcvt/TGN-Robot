@@ -11,6 +11,7 @@ from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram import TelegramError, Update
 from telegram.ext import run_async, CallbackContext
 from telegram.utils.helpers import mention_html
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 
 from TGNRobot import dispatcher
 from TGNRobot.modules.disable import DisableAbleCommandHandler
@@ -132,7 +133,7 @@ def kang(update: Update, context: CallbackContext):
         elif msg.reply_to_message.sticker and msg.reply_to_message.sticker.emoji:
             sticker_emoji = msg.reply_to_message.sticker.emoji
         else:
-            sticker_emoji = "🤔"
+            sticker_emoji = "💥"
 
         if not is_animated:
             try:
@@ -164,8 +165,12 @@ def kang(update: Update, context: CallbackContext):
                     emojis=sticker_emoji,
                 )
                 msg.reply_text(
-                    f"Sticker successfully added to [pack](t.me/addstickers/{packname})"
+                    f"Sticker successfully added"
                     + f"\nEmoji is: {sticker_emoji}",
+                    [
+        InlineKeyboardButton(
+            text="➕ᴀdd Me To your Group➕", url="(t.me/addstickers/{packname})"),
+    ],
                     parse_mode=ParseMode.MARKDOWN,
                 )
 
