@@ -102,7 +102,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-`ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ, ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴀ ʙᴜᴛᴛᴏɴ..`
+You Can Choose Any Option Below..Just Use Those Buttons..
 ᴀʟꜱᴏ ʏᴏᴜ ᴄᴀɴ ᴀꜱᴋ ᴀɴʏᴛʜɪɴɢ ɪɴ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ [💥](https://vsthemes.org/uploads/posts/2019-05/1558356725_2.png)"""
 
 START_IMG = "https://wallpapercave.com/wp/wp2439605.png"
