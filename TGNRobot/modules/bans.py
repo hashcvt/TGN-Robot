@@ -399,7 +399,7 @@ def selfunban(context: CallbackContext, update: Update) -> str:
 
 
 __help__ = """
- ❍ /KICKme*:* KICK the user who issued the command
+ ❍ /kickme*:* KICK the user who issued the command
 
 *Admins only:*
  ❍ /ban <userhandle>*:* bans a user. (via handle, or reply)
@@ -428,7 +428,7 @@ dispatcher.add_handler(UNBAN_HANDLER)
 dispatcher.add_handler(ROAR_HANDLER)
 dispatcher.add_handler(KICKME_HANDLER)
 
-__mod_name__ = "🤍 Ban/Mute 🤍"
+__mod_name__ = "❤️‍🔥 Ban/Mute"
 __handlers__ = [
     BAN_HANDLER,
     TEMPBAN_HANDLER,
