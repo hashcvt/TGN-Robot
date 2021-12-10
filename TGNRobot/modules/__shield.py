@@ -437,7 +437,7 @@ __help__ = """
  - /globalmode <i>on/off</i> - Enable|Disable English only mode
  - /profanity <i>on/off</i> - Enable|Disable slag word cleaning
  
-Note: Special credits goes to tr0j3n and Other Devs
+Note: Special credits goes to @Yukinonthecutebot
  
 """
-__mod_name__ = "🤍 Shield 🤍"
+__mod_name__ = "❤️‍🔥 Shield "
